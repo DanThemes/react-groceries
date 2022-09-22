@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 export const INITIAL_STATE = {
     items: []
 };
@@ -13,7 +15,7 @@ export const listReducer = (state, action) => {
                 items: [
                     ...state.items,
                     { 
-                        id: state.items.length,
+                        id: uuidv4(),
                         name: action.payload.name,
                         completed: action.payload.completed
                     }

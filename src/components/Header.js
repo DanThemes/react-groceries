@@ -7,7 +7,7 @@ const Header = ( {handleSubmit} ) => {
         <header>
             <form onSubmit={(e) => handleSubmit(e, inputRef)}>
                 <input ref={inputRef} type="text" placeholder="Add new..." />
-                <button type="submit">Add</button>
+                <button type="submit"><span>Add</span></button>
             </form>
         </header>
     )

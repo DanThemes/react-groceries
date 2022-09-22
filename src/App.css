@@ -37,6 +37,7 @@ header input {
     flex: 1;
 }
 
+.list button:focus,
 header input:focus {
     outline: 2px dashed #000;
 }
@@ -78,22 +79,51 @@ li {
 .list li {
     display: flex;
     background-color: #111;
-    align-items: center;
+    align-items: stretch;
     color: #fff;
     border-radius: 0.25rem;
-    padding: 0.75rem 1rem;
+    overflow: hidden;
 }
 .list li + li {
     margin-top: 0.5rem;
 }
 .list li span {
     flex: 1;
+    padding: 0.75rem 1rem;
+    align-self: center;
 }
 .list button {
-    color: red;
+    align-self: center;
+    color: #721e1e;
     background: transparent;
     border: 0;
     padding: 0;
     line-height: 1;
     font-size: 2rem;
+    padding: 0.75rem 1rem;
+    margin-top: -0.5rem;
+    position: relative;
+}
+header button span {
+    z-index: 2;
+    position: relative;
+}
+header button {
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+header button::after {
+    height: 2px;
+    background: #721e1e;
+    width: 100%;
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+header button:hover::after {
+    height: 100%;
 }
