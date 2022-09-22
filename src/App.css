@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+
+html, body {
+    background: #222;
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.container {
+    width: 900px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+    background: #222;
+    border-radius: 0.25rem;
+}
+header form {
+    display: flex;
+    gap: 1rem;
+}
+header input {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    flex: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header input:focus {
+    outline: 2px dashed #000;
 }
 
-.App-link {
-  color: #61dafb;
+header button {
+    background-color: #000;
+    border: none;
+    padding: 0.75rem 3rem;
+    border-radius: 0.25rem;
+    color: #fff;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.content {
+    padding: 2rem 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+    padding: 0;
+}
+
+.list li.completed {
+    background-color: #1c1c1c;
+}
+.list li.completed span {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.list li {
+    display: flex;
+    background-color: #111;
+    align-items: center;
+    color: #fff;
+    border-radius: 0.25rem;
+    padding: 0.75rem 1rem;
+}
+.list li + li {
+    margin-top: 0.5rem;
+}
+.list li span {
+    flex: 1;
+}
+.list button {
+    color: red;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 2rem;
 }
